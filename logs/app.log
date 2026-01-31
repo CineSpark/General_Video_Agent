@@ -1,0 +1,283 @@
+{"level": "INFO", "time": "2026-01-27 12:01:50.566", "caller": "logger/logging.py:86", "msg": "Logger init...", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:01:50.567", "caller": "../main.py:3", "msg": "hello", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:03:45.432", "caller": "logger/logging.py:86", "msg": "Logger init...", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:03:45.435", "caller": "../main.py:6", "msg": "service started", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:06:54.842", "caller": "logger/logging.py:92", "msg": "Logger init...", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:06:54.846", "caller": "../main.py:6", "msg": "service started", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:08:19.993", "caller": "src/logger/logging.py:92", "msg": "Logger init...", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:08:19.998", "caller": "main.py:6", "msg": "service started", "stacktrace": "", "tid": "", "event": "", "biz_monitor_ctx": {}}
+{"level": "INFO", "time": "2026-01-27 12:11:36.421", "caller": "src/logger/logging.py:97", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-27 12:11:36.426", "caller": "main.py:6", "msg": "service started", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-27 13:06:38.443", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-27 13:06:38.448", "caller": "main.py:7", "msg": "service started", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:03:29.859", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:05:28.961", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:07:28.003", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:08:11.052", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:08:19.209", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:08:30.067", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:11:10.825", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:11:39.070", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:11:45.698", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:18:01.715", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:18:13.198", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 15:18:30.832", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:22:00.391", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:23:03.925", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:23:05.824", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:23:12.341", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "WARNING", "time": "2026-01-28 17:23:53.054", "caller": "src/agent/base.py:194", "msg": "[None] [None] Agent main_agent Execution failed: name 'result' is not defined", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:26:48.623", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:27:10.568", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:27:19.854", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:43:56.998", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:44:36.445", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:44:47.396", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:44:52.253", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:44:53.323", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:46:09.819", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:46:41.579", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:46:45.658", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 17:46:46.615", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:09:04.236", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:09:20.752", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:09:21.722", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:09:40.597", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:09:55.501", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:09:56.976", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:13:56.274", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:14:26.675", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:14:27.749", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:14:28.565", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:16:32.216", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:16:42.243", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:16:43.264", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-28 18:16:43.955", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:17:20.844", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:17:47.382", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:18:04.974", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:18:19.437", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:22:21.494", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:22:36.873", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:22:40.188", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:22:42.468", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:25:05.143", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:25:12.319", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:25:12.320", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:25:12.321", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:29:47.818", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:01.377", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:01.378", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:01.379", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:27.253", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:43.057", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:45.669", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:30:46.957", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:38:02.376", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:38:17.953", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:38:20.699", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:38:21.658", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:13.477", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:18.988", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:18.989", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:18.989", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:49.366", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:56.066", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:56.067", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:40:56.067", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:46:19.630", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:46:32.062", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:46:32.064", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:46:32.064", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:48:38.023", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:48:47.507", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:48:47.507", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:48:47.507", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:51:23.681", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:51:25.707", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:51:25.707", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:51:25.707", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:52:15.697", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:52:41.803", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:52:42.835", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 16:52:43.435", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:14:38.502", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:14:39.948", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:14:39.948", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:14:39.948", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:15:27.085", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:15:28.526", "caller": "src/agent/main.py:94", "msg": "[None] [None] Start streaming user message, message: who are you?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:15:28.526", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:15:28.526", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: []", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:54:21.601", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:56:12.893", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:56:18.280", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:56:18.280", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 17:56:18.281", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:03:24.568", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:03:32.067", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:03:32.068", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:03:32.069", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:05:09.878", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:05:15.141", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:05:15.142", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:05:15.143", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:06:02.639", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:06:08.429", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:06:08.429", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:06:08.431", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:15:49.767", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:16:13.644", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:16:13.647", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:16:13.647", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:17:31.953", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:17:40.704", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:17:40.706", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:17:40.707", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:20:47.477", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:20:54.724", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:20:54.725", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:20:54.725", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:06.448", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:11.975", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:11.975", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:11.975", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:50.615", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:58.480", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:58.482", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:26:58.483", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:38:57.623", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:39:03.059", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:39:03.060", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:39:03.060", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:52:32.306", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:52:33.687", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:52:33.687", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:52:33.687", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:53:15.269", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:53:19.380", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:53:19.380", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:53:19.380", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:57:03.758", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:57:05.684", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:57:05.684", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 18:57:05.684", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:11:24.135", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:11:25.446", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:11:25.446", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:11:25.446", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:11.034", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:13.943", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:13.943", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:13.943", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:56.102", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:57.780", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:57.780", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:12:57.780", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:18:20.445", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:18:22.352", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:18:22.352", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:18:22.352", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:19:50.160", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:19:52.182", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:19:52.183", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:19:52.183", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:21:44.270", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:21:47.007", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:21:47.008", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:21:47.008", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:23:08.645", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:23:11.543", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:23:11.543", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:23:11.544", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:26:51.360", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:26:53.369", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:26:53.369", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 19:26:53.369", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 21:59:32.780", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 21:59:34.993", "caller": "src/agent/main.py:96", "msg": "[None] [None] Start streaming user message, message: what is the weather in HongKong?", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 21:59:34.994", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-30 21:59:34.994", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['get_weather']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:10:32.715", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:11:57.454", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:12:00.862", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:12:00.862", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:12:00.863", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:39:39.544", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:39:41.558", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:39:41.558", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:39:41.558", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:41:31.603", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:41:33.292", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:41:33.292", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:41:33.292", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:42:12.344", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:42:14.907", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:42:14.907", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:42:14.907", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:03.537", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:05.021", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:05.021", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:05.021", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:55.893", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:58.463", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:58.463", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:50:58.464", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:51:25.490", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:51:28.009", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:51:28.009", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:51:28.010", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:53:08.595", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:53:11.218", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:53:11.218", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:53:11.218", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:55:46.397", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:55:49.707", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:55:49.708", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:55:49.708", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:59:20.527", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:59:24.366", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:59:24.366", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 17:59:24.366", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:07:25.440", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:07:27.067", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:07:27.067", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:07:27.067", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:07:33.810", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:09:36.142", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:09:38.930", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:09:38.930", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:09:38.930", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:10:37.873", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:12:01.680", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:12:08.915", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:12:08.915", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:12:08.915", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['upload_to_tos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:15:22.831", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:15:25.381", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:15:25.381", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:15:25.381", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['uploadtotos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:16:40.768", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:16:43.245", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:16:43.246", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:16:43.246", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['uploadtotos']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:19:52.032", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:19:57.612", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:19:57.612", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:19:57.612", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['UploadToTOS']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:21:09.152", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:05.596", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:09.281", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:09.282", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:09.282", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['UploadToTOS']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:23.544", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:40.024", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:43.198", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:43.198", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:43.198", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['UploadToTOS']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:23:54.799", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:25:13.387", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:25:16.134", "caller": "src/agent/main.py:95", "msg": "[None] [None] Start streaming user message, message: I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:25:16.134", "caller": "src/agent/base.py:117", "msg": "[None] [None] Starting agent: main_agent execution...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:25:16.135", "caller": "src/agent/base.py:120", "msg": "[None] [None] Agent: main_agent available tools: ['UploadToTOS']", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 18:25:18.701", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}

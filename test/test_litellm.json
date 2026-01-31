@@ -1,0 +1,28 @@
+{
+  "id": "chatcmpl-e9a7e88e-5a91-915e-aa63-1d5bba48fa98",
+  "created": 1769757076,
+  "model": "dashscope/qwen-max-latest",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Hello! It's great to hear from you. How can I assist you today? Feel free to ask me any questions or let me know if you need help with anything specific! 😊",
+        "role": "assistant",
+        "tool_calls": null,
+        "function_call": null
+      },
+      "provider_specific_fields": {}
+    }
+  ],
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 13,
+    "total_tokens": 51,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "service_tier": null
+}

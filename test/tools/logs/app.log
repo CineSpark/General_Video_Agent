@@ -1,0 +1,4 @@
+{"level": "INFO", "time": "2026-01-31 16:00:01.692", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "ERROR", "time": "2026-01-31 16:00:01.937", "caller": "src/tool/upload_to_tos.py:88", "msg": "✗ 文件不存在: /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpeg", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:01:02.797", "caller": "src/logger/logging.py:93", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-01-31 16:01:03.464", "caller": "src/tool/upload_to_tos.py:65", "msg": "✓ 文件上传成功: https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg", "stacktrace": "", "event": ""}
