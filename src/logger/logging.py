@@ -60,6 +60,15 @@ class LogConfig:
                 # "biz_monitor_ctx": record["extra"].get("biz_monitor_ctx", {}),
             }
             record["extra"]["_json_"] = json.dumps(log_data, ensure_ascii=False)
+            record["extra"]["caller"] = caller
+        
+        console_format = (
+            "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | "
+            "<level>{level:<5}</level> | "
+            "<cyan>{extra[caller]}</cyan> | "
+            "<level>{message}</level>\n"
+            "{exception}"
+        )
 
         # 清除默认配置并添加新配置
         logger.remove()
@@ -81,9 +90,12 @@ class LogConfig:
         logger.configure(patcher=formatter)
 
         logger.add(
-        sys.stdout,
-        format=lambda _: "{extra[_json_]}\n",
-        level="INFO",
+            sys.stdout,
+            format=console_format,
+            level="INFO",
+            colorize=True,
+            backtrace=True,
+            diagnose=True,
         )
 
 

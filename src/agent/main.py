@@ -1,8 +1,7 @@
 from .base import BaseAgent
 from typing import Optional, List, Dict, Any
 from ..logger import logger
-
-from ..tool import get_tool_schema
+from ..tool.registor import get_tool_schema
 
 class MainAgent(BaseAgent):
     """

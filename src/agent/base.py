@@ -7,12 +7,20 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 import time
 import json
+import uuid
 
-# from ..llm.invoke import handle_recursive_completion
 from ..logger import logger
-# from ..shared.id import generate_event_id
-# from ..event.events import EventType
-from ..model.llm.invoke import handle_recursive_completion
+from ..event.events import EventType
+from ..orchestration.runner import runner
+from ..tool.executor import executor
+from ..event.events import Event
+
+def _get(obj, key, default=None):
+    if obj is None:
+        return default
+    if isinstance(obj, dict):
+        return obj.get(key, default)
+    return getattr(obj, key, default)
 
 class BaseAgent(ABC):
     """Base class for both main agents and sub agents"""
@@ -46,6 +54,9 @@ class BaseAgent(ABC):
         self.invocation_id = invocation_id
         self.model = model
         self.parent_span_id = parent_span_id
+        self.executor = executor(user_id=user_id, session_id=session_id, invocation_id=invocation_id, author=name)
+        self.runner = runner(user_id=user_id, session_id=session_id, invocation_id=invocation_id, tools=self.tools, model=model, author=name, executor=self.executor)
+        
 
     def basic_info(self):
         return f"Current time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S %A')} UTC\n"
@@ -143,62 +154,27 @@ class BaseAgent(ABC):
                 filtered_messages = [processed_message]
             else:
                 filtered_messages = []
-
-            yield {
-                "type" : "user_message",
-                "content" : json.dumps(
+            
+            yield Event(
+                type=EventType.USER_MESSAGE,
+                event_id=str(uuid.uuid4()),
+                user_id=self.user_id,
+                session_id=self.session_id,
+                invocation_id=self.invocation_id,
+                author=self.name,
+                timestamp=time.time(),
+                content=json.dumps(
                     filtered_messages,
                     ensure_ascii=False,
                 ),
-            }
+            )
 
-            # Notify client that agent is starting execution with session storage
-            # yield {
-            #     "type": EventType.USER_MESSAGE,
-            #     "content": json.dumps(
-            #         filtered_messages,
-            #         ensure_ascii=False,
-            #     ),
-            #     "event_id": generate_event_id(),
-            #     "author": kwargs.get("user_message_author", "invocation_user"),
-            #     "sub_invocation_id": self.sub_invocation_id,
-            # }
 
-            # # Stream the response            # todo: handle_recursive_completion
-            # result = None
-            # async for chunk in handle_recursive_completion(
-            #     trace=self.trace,
-            #     messages=messages,
-            #     tools=self.tools,
-            #     model=self.model,
-            #     thinking=thinking,
-            #     safety=safety,
-            #     session=session,
-            #     session_service=session_service,
-            #     invocation_id=self.invocation_id,
-            #     sub_invocation_id=self.sub_invocation_id,
-            #     author=self.name,
-            #     parent_span_id=self.parent_span_id
-            #     or parent_span_id,  # Use instance parent_span_id or passed parameter
-            # ):
-            #     yield chunk
-            #     if chunk.get("type") == "complete_response":
-            #         result = chunk.get("content", "")
-            async for chunk in handle_recursive_completion(
-                messages=messages,
-                tools=self.tools,
-                model=self.model,
-                thinking=None,
-                safety=None,
-                session=None,
-                session_service=None,
-                invocation_id=self.invocation_id,
-                author=self.name,
-            ):
-                # print("chunk: ", chunk)
+            async for chunk in self.runner.run(messages):
                 yield chunk
-                # if chunk.get("type") == "complete_response":
-                #     result = chunk.get("content", "")
+
+                if _get(chunk, "type", "") == EventType.COMPLETE_RESPONSE:
+                    result = _get(chunk, "content", "")
 
             # Calculate duration and call end hook
             duration = time.time() - start_time

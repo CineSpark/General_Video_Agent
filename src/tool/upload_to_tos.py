@@ -5,6 +5,7 @@ from typing import Dict, Any, Optional
 import os
 import tos
 import time
+from ..tool.types import ToolExeResult
 
 class UploadToTOS(BaseTool):
     def __init__(self):
@@ -26,14 +27,17 @@ class UploadToTOS(BaseTool):
         folder: str = "files",
         max_retries: int = 3,
         **kwargs
-    ) -> Dict[str, Any]:
+    ) -> ToolExeResult:
 
         validation = self.validate_params(
             local_path=local_path,
             introduction=introduction,
         )
         if not validation["success"]:
-            return validation
+            return ToolExeResult(
+                success=False,
+                error=validation["error"],
+            )
 
         tos_config = load_tos_config()
         ak = tos_config["access_key"]
@@ -44,10 +48,10 @@ class UploadToTOS(BaseTool):
 
         if not ak or not sk or not bucket_name:
             logger.error("Missing required TOS configuration")
-            return {
-                "success": False,
-                "error": "Missing required TOS configuration",
-            }
+            return ToolExeResult(
+                success=False,
+                error="Missing required TOS configuration",
+            )
         
         object_key = f"{folder}/{os.path.basename(local_path)}"
 
@@ -63,7 +67,10 @@ class UploadToTOS(BaseTool):
 
                 file_url = f"https://{bucket_name}.{endpoint}/{object_key}"
                 logger.info(f"✓ 文件上传成功: {file_url}")
-                return {"success": True, "file_url": file_url}
+                return ToolExeResult(
+                    success=True,
+                    result={"file_url": file_url},
+                )
 
             except tos.exceptions.TosClientError as e:
                 error_msg = f"TOS客户端错误: {e.message}"
@@ -106,7 +113,7 @@ class UploadToTOS(BaseTool):
                     except:
                         pass
         
-        return {
-            "success": False,
-            "error": "File upload failed after max retries",
-        }
+        return ToolExeResult(
+            success=False,
+            error="File upload failed after max retries",
+        )
