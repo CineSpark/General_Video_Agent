@@ -1,17 +1,20 @@
 import os
 from .upload_to_tos import UploadToTOS
 from .media_analyze import MediaAnalyze
+from .todo import TodoWrite
 from typing import List, Dict, Any
 
 TOOLS = {
     "UploadToTOS": UploadToTOS(),
     "MediaAnalyze": MediaAnalyze(),
+    "TodoWrite": TodoWrite(),
 }
 
 AVAILABLE_TOOLS = {
     "main_agent": [
         ("UploadToTOS", UploadToTOS()),
         ("MediaAnalyze", MediaAnalyze()),
+        ("TodoWrite", TodoWrite()),
     ],
 }
 

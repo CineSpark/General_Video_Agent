@@ -39,24 +39,36 @@ async def main():
     prompt = """
 You are a help assistant!
 
-Rules:
-- You must call at most ONE tool per model invocation.
-- If a picture needs to be analyzed, you MUST upload it first using the UploadToTOS tool.
-- Do not call MediaAnalyze until a valid TOS URL is obtained from UploadToTOS.
-- After a tool call, wait for the tool result before deciding the next action.
-- Use the tool result from previous steps as input for the next step. 
+If a TODO list is created, you should follow it strictly.
 """
-    user_message = """
-I want to analyze two pictures.
 
-The local file path is:
+# Rules:
+# - You must call at most ONE tool per model invocation.
+# - If a picture needs to be analyzed, you MUST upload it first using the UploadToTOS tool.
+# - Do not call MediaAnalyze until a valid TOS URL is obtained from UploadToTOS.
+# - After a tool call, wait for the tool result before deciding the next action.
+# - Use the tool result from previous steps as input for the next step. 
+#     user_message = """
+# I want to analyze two pictures. Use the TodoWrite tool to create a todo list to record the task planning and progress.
+
+# The local file path is:
+# - /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg
+# - /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/dog.jpg
+
+# Please upload the picture to TOS first.
+# After you obtain the TOS URL, analyze the picture using that URL.
+
+#     """
+
+    user_message = """
+我想要分析两张图片，使用 TodoWrite 这个工具创建 Todo 列表来记录任务规划和任务进度。
+
+本地文件路径是：
 - /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg
 - /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/dog.jpg
 
-Please upload the picture to TOS first.
-After you obtain the TOS URL, analyze the picture using that URL.
-
-    """
+请先上传图片到 TOS，然后使用 TOS 的 URL 分析图片。上传分析完第一张图片后，再上传第二张图片，并分析第二张图片。
+"""
 
     user_id = "user_123"
     session_id = "session_123"

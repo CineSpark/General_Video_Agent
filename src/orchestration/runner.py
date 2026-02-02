@@ -219,6 +219,13 @@ class runner():
                 return
 
             ## call tools
+
+            # inform that the tool calls are starting
+            msg = "🛠️ Tool Call Starting:"
+            for tool_call in tool_calls:
+                msg += f"\n- Tool Call ID: {tool_call.id} \n- Tool Call Function Name: {tool_call.function.name} \n- Tool Call Function Arguments: {json.dumps(tool_call.function.arguments, indent=2, ensure_ascii=False)}\n"
+            logger.info(msg)
+
             # Create a resposne object for tool handling compatibility
             tool_response = ToolCallResponse(content=full_content, tool_calls=tool_calls)
 

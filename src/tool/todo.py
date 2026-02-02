@@ -1,28 +1,145 @@
 import json
 from typing import Dict, Any, List, Optional
+from pydantic import BaseModel, Field
+import threading
+from ..tool.types import ToolExeResult
 
-from ..memory.models import Todo
-from ..prompt import (
+from ..prompt.todo import (
     TODO_TOOL_DESC_PROMPT,
     TODO_TOOL_RESPONSE_PROMPT,
-    get_prompt_by_name,
-    PROMPT_NAME_TODO_TOOL_DESCRIPTION,
-    PROMPT_NAME_TODO_TOOL_RESPONSE,
     TODO_TOOL_SYSTEM_REMINDER_ONLY_ONE_PROMPT,
 )
-from ..memory import get_todo_memory_service
 from .base import BaseTool
 from ..logger import logger
 
 
-# https://github.com/shareAI-lab/Kode/blob/main/src/tools/TodoWriteTool/TodoWriteTool.tsx
+class Todo(BaseModel):
+    id: str
+    content: str
+    status: str
+    priority: str
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]):
+        return cls(
+            id=data["id"],
+            content=data["content"],
+            status=data["status"],
+            priority=data.get("priority", "medium"),
+        )
+
+class TodoSession(BaseModel):
+    """Todo session model"""
+    invocation_id: str
+    todos: Dict[str, Todo] = Field(default_factory=dict, description="The todos of the session")
+    last_updated: float = Field(default_factory=lambda: __import__("time").time())
+
+    def update_timestamp(self):
+        self.last_updated = __import__("time").time()
+
+
+class TodoMemoryService:
+
+    def __init__(self):
+        self._sessions : Dict[str, TodoSession] = {}
+        self._lock = threading.RLock()
+    
+    def get_session(self, invocation_id: str) -> TodoSession:
+        """获取或创建会话"""
+        with self._lock:
+            if invocation_id not in self._sessions:
+                self._sessions[invocation_id] = TodoSession(invocation_id=invocation_id)
+            return self._sessions[invocation_id]
+    
+    def save_todos(self, invocation_id: str, todos: List[Todo]):
+        """保存todos到指定会话"""
+        with self._lock:
+            session = self.get_session(invocation_id=invocation_id)
+
+            # 清空
+            session.todos.clear()
+
+            # 增加新的todos
+            for todo in todos:
+                session.todos[todo.id] = todo
+            
+            session.update_timestamp()
+        
+    def update_todos_incrementally(self, invocation_id: str, new_todos: List[Todo]):
+        """增量更新todos"""
+        with self._lock:
+            session = self.get_session(invocation_id=invocation_id)
+
+            updated_count = 0
+            added_count = 0
+
+            # 处理每个新的todo
+            for new_todo in new_todos:
+                if new_todo.id in session.todos:
+                    # 更新
+                    session.todos[new_todo.id] = new_todo
+                    updated_count += 1
+                else:
+                    # 新增
+                    session.todos[new_todo.id] = new_todo
+                    added_count += 1
+            
+            session.update_timestamp()
+
+            # 返回更新统计和完整列表
+            all_todos = list(session.todos.values())
+            return {
+                "updated": updated_count,
+                "added": added_count,
+                "total": len(all_todos),
+                "todos": all_todos,
+            }
+    
+    def load_todos(self, invocation_id: str) -> List[Todo]:
+        """从指定会话中加载todos"""
+        with self._lock:
+            session = self.get_session(invocation_id)
+            return list(session.todos.values())
+    
+    def update_todo(self, invocation_id: str, todo: Todo) -> None:
+        """更新单个todo"""
+        with self._lock:
+            session = self.get_session(invocation_id=invocation_id)
+            if todo.id in session.todos:
+                session.todos[todo.id] = todo
+                session.update_timestamp()
+                return True
+            else:
+                return False
+
+# 全局todo内存服务实例
+_todo_memory_service: Optional[TodoMemoryService] = None
+_service_lock = threading.RLock()
+
+def get_todo_memory_service() -> TodoMemoryService:
+    """获取全局唯一的todo内存服务实例"""
+    global _todo_memory_service
+
+    if _todo_memory_service is None:
+        with _service_lock:
+            if _todo_memory_service is None:
+                _todo_memory_service = TodoMemoryService()
+    
+    return _todo_memory_service
+
+def reset_todo_memory_service() -> None:
+    """重置todo内存服务实例"""
+    global _todo_memory_service
+    with _service_lock:
+        _todo_memory_service = None
+
+
+
 class TodoWrite(BaseTool):
     def __init__(self):
         super().__init__()
         self.name = "TodoWrite"
-        self.description = get_prompt_by_name(
-            PROMPT_NAME_TODO_TOOL_DESCRIPTION, TODO_TOOL_DESC_PROMPT
-        )
+        self.description = TODO_TOOL_DESC_PROMPT  # todo
         self.parameters = {
             "type": "object",
             "properties": {
@@ -104,8 +221,8 @@ class TodoWrite(BaseTool):
         # 检查是否已经在事件循环中运行
         try:
             loop = asyncio.get_running_loop()
-            # 如果在事件循环中，返回协程让调用者处理
-            return self.execute_async(todos)
+            # 如果在事件循环中，直接await执行
+            return await self.execute_async(todos, **kwargs)
         except RuntimeError:
             # 不在事件循环中，创建新的并运行
             loop = asyncio.new_event_loop()
@@ -165,10 +282,7 @@ class TodoWrite(BaseTool):
             )
 
             # 获取基础的响应提示
-            base_response = get_prompt_by_name(
-                PROMPT_NAME_TODO_TOOL_RESPONSE,
-                TODO_TOOL_RESPONSE_PROMPT,
-            )
+            base_response = TODO_TOOL_RESPONSE_PROMPT
 
             # 如果只剩一个 in_progress to do，添加特殊提示
             if in_progress_count == 1 and total_pending_and_in_progress == 1:
@@ -178,22 +292,21 @@ class TodoWrite(BaseTool):
             else:
                 final_response = base_response
 
-            return {
-                "success": True,
-                "stats": {
-                    "updated": update_result["updated"],
-                    "added": update_result["added"],
-                    "total": update_result["total"],
-                },
-                "result": final_response,
-            }
+            return ToolExeResult(
+                success=True,
+                result=final_response,
+            )
 
         except Exception as e:
             logger.error(
                 f"[{session_id}] [{invocation_id}] Tool {self.name} Execution failed: {e}"
             )
-            return {"success": False, "error": f"Error updating todos: {str(e)}"}
-
+            return ToolExeResult(
+                success=False,
+                error=f"Error updating todos: {str(e)}",
+                result=f"Error updating todos: {str(e)}",
+            )
+            
     def get_current_todos(self, invocation_id: Optional[str] = None) -> List[Todo]:
         """获取当前的to do列表"""
         if invocation_id:
