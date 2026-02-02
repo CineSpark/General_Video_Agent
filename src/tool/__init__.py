@@ -1,15 +1,18 @@
 from .base import BaseTool
 from .upload_to_tos import UploadToTOS
+from .media_analyze import MediaAnalyze
 from typing import List, Dict, Any
 
 
 TOOLS = {
     "UploadToTOS": UploadToTOS(),
+    "MediaAnalyze": MediaAnalyze(),
 }
 
 AVAILABLE_TOOLS = {
     "main_agent": [
-        ("UploadToTOS", UploadToTOS())
+        ("UploadToTOS", UploadToTOS()),
+        ("MediaAnalyze", MediaAnalyze()),
     ],
 }
 

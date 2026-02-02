@@ -90,6 +90,8 @@ class runner():
                 "model": self.model,
                 "messages": self.messages,
                 "api_base": self.api_base_url,
+                "temperature": 0.1,
+                "parallel_tool_calls": False,
                 "stream": True,
             }
             if self.tools:

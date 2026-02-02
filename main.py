@@ -7,8 +7,57 @@ from src.event.events import EventType
 LogConfig.init_logger()
 
 async def main():
-    prompt = "You are a useful assistant!"
-    user_message = "I want to upload the cat picture to TOS, and the path is **/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg**"
+#     prompt = """You are a helpful assistant that can call tools.
+
+# Rules:
+# - You may call at most ONE tool per model invocation.
+# - If multiple files need to be uploaded, upload them sequentially.
+# - After a tool call, wait for the tool result before deciding the next action.
+# - Use the information from previous tool results to decide what to do next.
+# """
+#     user_message = """I want to upload two pictures to TOS.
+
+# The pictures are:
+# 1. cat picture: /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg
+# 2. dog picture: /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/dog.jpg
+
+# **https://lingee-video.tos-cn-beijing.volces.com/files/cat.jpg**
+
+# Please upload them one by one.
+# """
+
+#     prompt = """
+# You are a helpful assistant that can call tools.
+
+# Rules:
+# - You must call at most ONE tool per model invocation.
+# - If a picture needs to be analyzed, you MUST upload it first using the UploadToTOS tool.
+# - Do not call MediaAnalyze until a valid TOS URL is obtained from UploadToTOS.
+# - After a tool call, wait for the tool result before deciding the next action.
+# - Use the tool result from previous steps as input for the next step. 
+# """
+    prompt = """
+You are a help assistant!
+
+Rules:
+- You must call at most ONE tool per model invocation.
+- If a picture needs to be analyzed, you MUST upload it first using the UploadToTOS tool.
+- Do not call MediaAnalyze until a valid TOS URL is obtained from UploadToTOS.
+- After a tool call, wait for the tool result before deciding the next action.
+- Use the tool result from previous steps as input for the next step. 
+"""
+    user_message = """
+I want to analyze two pictures.
+
+The local file path is:
+- /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg
+- /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/dog.jpg
+
+Please upload the picture to TOS first.
+After you obtain the TOS URL, analyze the picture using that URL.
+
+    """
+
     user_id = "user_123"
     session_id = "session_123"
     invocation_id = "invocation_123"
