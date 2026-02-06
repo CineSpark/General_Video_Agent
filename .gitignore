@@ -2,3 +2,10 @@
 .vscode
 **/__pycache__/
 **/.DS_Store
+
+# Inputs and Outputs
+output/*
+!output/.gitkeep
+input/*
+!input/.gitkeep
+work_dir/
