@@ -72,13 +72,15 @@ If a TODO list is created, you should follow it strictly.
 # 使用 task 工具创建一个任务，并委托 Analyzer 子代理来上传图片和分析图片。
 # """
 
-    user_message = """
-我想要分析一个视频,
+#     user_message = """
+# 我想要分析一个视频,
 
-/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/002.mp4
+# /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/002.mp4
 
-使用 task 工具创建一个任务，并委托 Analyzer 子代理来上传视频和分析视频。
-"""
+# 使用 task 工具创建一个任务，并委托 Analyzer 子代理来上传视频和分析视频。
+# """
+
+    user_message = "hello, who are you?"
 
     user_id = "user_123"
     session_id = "session_123"

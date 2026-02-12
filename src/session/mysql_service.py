@@ -398,3 +398,9 @@ class MySQLSessionService(BaseSessionService):
                 f"[{session.user_id}] [{session.session_id}] Event addition failed: {e}"
             )
             raise ValueError(f"添加事件失败: {e}") from e
+       
+    def close(self):
+        """关闭数据库连接"""
+        if hasattr(self, "engine"):
+            self.engine.dispose()
+            logger.info("MySQL connection closed")
