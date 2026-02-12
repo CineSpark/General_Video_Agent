@@ -2,6 +2,8 @@ from .base import BaseAgent
 from typing import Optional, List, Dict, Any
 from ..logger import logger
 from ..tool.registor import get_tool_schema
+from ..session.mysql_service import MySQLSessionService
+from ..event.events import EventType
 
 class MainAgent(BaseAgent):
     """
@@ -68,10 +70,11 @@ class MainAgent(BaseAgent):
             }
         ]
 
-        # # 从数据库中获取用户会话的消息         # todo session_service
-        # db_messages = self.session_service.get_messages(self.user_id, self.session_id)
-        # for msg in db_messages:
-        #     messages.append({"role": msg["role"], "content": msg["content"]})
+        # 从数据库中获取用户会话的消息         # todo session_service
+        if self.session_service is not None:
+            db_messages =  self.session_service.get_messages(self.user_id, self.session_id)
+            for msg in db_messages:
+                messages.append({"role": msg["role"], "content": msg["content"]})
 
         # message_content = [
         #     {"type": "text", "text": user_preference_prompt},
@@ -105,18 +108,31 @@ class MainAgent(BaseAgent):
         return : 异步生成器用于流式响应;
         
         """
+        if self.session_service is None:
+            self.session_service = MySQLSessionService(db_url="mysql+pymysql://root:123456@localhost:3306/video_agent",)
+            self.session = await self.session_service.get_session(user_id=self.user_id, session_id=self.session_id)
+            if self.session is None:
+                self.session = await self.session_service.create_session(user_id=self.user_id, session_id=self.session_id)
 
         response_generation = self.execute()
 
         async for chunk in response_generation:
 
             # print("chunk: ", chunk)
+            print(f"="*100)
+            print(f"chunk type: {chunk.type}")
+            print(f"="*100)
+
+            if chunk.type not in [EventType.RESPONSE_CHUNK, EventType.TOOL_CALL]:
+                await self.session_service.append_event(self.session, chunk)
 
             yield chunk
 
             # print(" hello ")
         
         # print("hello")
+        if self.session_service is not None:
+            self.session_service.close()
 
     async def on_conversation_start(self) -> None:
         """

@@ -2,6 +2,7 @@ import os
 import json
 import time
 from litellm import acompletion
+import litellm
 from ..event.events import EventType
 from ..logger import logger
 from dotenv import load_dotenv
@@ -96,6 +97,8 @@ class runner():
             }
             if self.tools:
                 completion_params["tools"] = self.tools
+
+            # litellm._turn_on_debug()  # 调试时开启，上线时注释掉
 
             response = await acompletion(**completion_params)
 

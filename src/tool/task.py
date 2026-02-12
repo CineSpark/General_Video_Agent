@@ -143,7 +143,7 @@ class Task(BaseTool):
 
             yield Event(
                 type=EventType.TASK_ERROR,
-                event_id=task_id,
+                event_id=str(uuid.uuid4()),
                 user_id=user_id,
                 session_id=session_id,
                 invocation_id=invocation_id,
@@ -166,7 +166,7 @@ class Task(BaseTool):
             )
             yield Event(
                 type=EventType.TASK_ERROR,
-                event_id=task_id,
+                event_id=str(uuid.uuid4()),
                 user_id=user_id,
                 session_id=session_id,
                 invocation_id=invocation_id,
@@ -182,7 +182,7 @@ class Task(BaseTool):
         try:
             yield Event(
                 type=EventType.TASK_START,
-                event_id=task_id,
+                event_id=str(uuid.uuid4()),
                 user_id=user_id,
                 session_id=session_id,
                 invocation_id=invocation_id,
@@ -238,7 +238,7 @@ class Task(BaseTool):
 
             yield Event(
                 type=EventType.TASK_COMPLETE,
-                event_id=task_id,
+                event_id=str(uuid.uuid4()),
                 user_id=user_id,
                 session_id=session_id,
                 invocation_id=invocation_id,
@@ -261,7 +261,7 @@ class Task(BaseTool):
             )
             yield Event(
                 type=EventType.TASK_ERROR,
-                event_id=task_id,
+                event_id=str(uuid.uuid4()),
                 user_id=user_id,
                 session_id=session_id,
                 invocation_id=invocation_id,

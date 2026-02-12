@@ -2,9 +2,9 @@
 from ..logger.logging import logger
 from .base_session import BaseSessionService
 from ..session.types import Session
-from ..event.events import Event
+from ..event.events import Event, EventType
 from .base_session import SessionList
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 import uuid
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -391,6 +391,10 @@ class MySQLSessionService(BaseSessionService):
                     f"[{session.user_id}] [{session.session_id}] Event added successfully: {event.event_id} to session"
                 )
 
+                # 更新消息表, 只保留 user_message 和 complete_response 类型的事件
+                if event.type in [EventType.USER_MESSAGE, EventType.COMPLETE_RESPONSE]:
+                    await self.append_message(session, event)
+
                 return event
 
         except SQLAlchemyError as e:
@@ -398,7 +402,87 @@ class MySQLSessionService(BaseSessionService):
                 f"[{session.user_id}] [{session.session_id}] Event addition failed: {e}"
             )
             raise ValueError(f"添加事件失败: {e}") from e
-       
+    
+    async def append_message(self, session: Session, event: Event):
+        """向会话添加消息
+
+        根据 event 的 type 过滤 user_message 和 complete_response，
+        将相应内容存到 messages 表中
+        """
+
+
+        try:
+            # 只处理 user_message 和 complete_response 类型的事件
+            if event.type == EventType.USER_MESSAGE:
+                role = "user"
+            elif event.type == EventType.COMPLETE_RESPONSE:
+                role = "assistant"
+            else:
+                # 忽略其他类型的事件
+                return
+
+            with self.SessionLocal() as db_session:
+                # 插入消息记录
+                insert_sql = text(
+                    """
+                    INSERT INTO messages
+                    (event_id, user_id, session_id, role, content, created_at)
+                    VALUES (:event_id, :user_id, :session_id, :role, :content, FROM_UNIXTIME(:timestamp))
+                    ON DUPLICATE KEY UPDATE
+                        content = VALUES(content),
+                        created_at = VALUES(created_at)
+                    """
+                )
+
+                db_session.execute(
+                    insert_sql,
+                    {
+                        "event_id": event.event_id,
+                        "user_id": event.user_id,
+                        "session_id": event.session_id,
+                        "role": role,
+                        "content": event.content,
+                        "timestamp": event.timestamp,
+                    }
+                )
+                db_session.commit()
+
+                logger.info(
+                    f"[{session.user_id}] [{session.session_id}] Message added successfully: "
+                    f"event_id={event.event_id}, role={role}"
+                )
+
+        except SQLAlchemyError as e:
+            logger.error(f"[{session.user_id}] [{session.session_id}] Message addition failed: {e}")
+            raise ValueError(f"添加消息失败: {e}") from e
+    
+    def get_messages(self, user_id: str, session_id: str) -> List[Dict[str, Any]]:
+        """
+        根据user_id和session_id获取指定会话的消息
+        """
+        try:
+            with self.SessionLocal() as db_session:
+                messages_sql = text(
+                    """
+                    SELECT event_id, user_id, session_id, role, content, 
+                        UNIX_TIMESTAMP(created_at) AS timestamp
+                    FROM messages
+                    WHERE user_id = :user_id AND session_id = :session_id
+                    ORDER BY created_at ASC
+                """
+                )
+
+                result = db_session.execute(
+                    messages_sql,
+                    {"user_id": user_id, "session_id": session_id},
+                )
+                rows = result.mappings().all()
+                return rows
+
+        except SQLAlchemyError as e:
+            logger.error(f"[{user_id}] [{session_id}] Message retrieval failed: {e}")
+            raise ValueError(f"Failed to retrieve messages: {e}") from e
+
     def close(self):
         """关闭数据库连接"""
         if hasattr(self, "engine"):

@@ -164,7 +164,7 @@ class BaseAgent(ABC):
                 author=self.name,
                 timestamp=time.time(),
                 content=json.dumps(
-                    filtered_messages,
+                    filtered_messages[0]["content"],
                     ensure_ascii=False,
                 ),
             )

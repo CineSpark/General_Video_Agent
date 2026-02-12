@@ -147,7 +147,7 @@ def setup_database():
                 cursor.execute("SHOW TABLES")
                 tables = cursor.fetchall()
 
-                expected_tables = ["sessions", "events"]
+                expected_tables = ["sessions", "events", "messages"]
                 found_tables = [
                     table for row in tables for table in row.values() if table in expected_tables
                 ]

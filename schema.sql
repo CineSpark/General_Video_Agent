@@ -31,3 +31,17 @@ CREATE TABLE IF NOT EXISTS events (
     INDEX idx_timestamp (timestamp),
     INDEX idx_invocation_id (invocation_id)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='事件记录表';
+
+-- 消息表
+CREATE TABLE IF NOT EXISTS messages (
+    event_id VARCHAR(128) NOT NULL PRIMARY KEY COMMENT '事件唯一标识符',
+    user_id VARCHAR(128) NOT NULL COMMENT '用户标识符',
+    session_id VARCHAR(128) NOT NULL COMMENT '会话标识符',
+    role ENUM('user','assistant') NOT NULL COMMENT '消息角色',
+    content LONGTEXT NOT NULL COMMENT '消息内容',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '消息时间',
+
+    INDEX idx_messages_user (user_id),
+    INDEX idx_messages_session (session_id),
+    INDEX idx_messages_created (created_at)
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='消息表';
