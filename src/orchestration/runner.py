@@ -235,11 +235,11 @@ class runner():
             async for tool_event in self.executor.handle_tool_call_streaming(tool_response):
                 yield tool_event
 
-                original_tool_call_ids = [tc.id for tc in tool_calls]
-                event_tool_call_id = tool_event.tool_result.tool_call_id
+                # original_tool_call_ids = [tc.id for tc in tool_calls]
+                # event_tool_call_id = tool_event.tool_result.tool_call_id
 
-                if (tool_event.type == EventType.TOOL_RESPONSE
-                and event_tool_call_id in original_tool_call_ids):
+                if (tool_event.type in [EventType.TOOL_RESPONSE, EventType.TASK_COMPLETE, EventType.TASK_ERROR]
+                and tool_event.tool_result.tool_call_id in [tc.id for tc in tool_calls]):
                     tool_results.append(tool_event.tool_result)
 
             assistant_message = {"role": "assistant", "content": full_content}
@@ -267,6 +267,7 @@ class runner():
                     tool_message = {
                         "role": "tool",
                         "tool_call_id": tool_result.tool_call_id,
+                        "function_name": tool_result.function_name,
                         "content": tool_result.result.model_dump_json(indent=2, ensure_ascii=False),
                     }
                     self.messages.append(tool_message)
@@ -274,6 +275,7 @@ class runner():
             # print("*"*100)
             # print("messages: ", json.dumps(self.messages, indent=2, ensure_ascii=False))
             # print("*"*100)
+            print("")
             async for chunk in self.run(self.messages):
                     yield chunk
 

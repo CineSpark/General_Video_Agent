@@ -24,6 +24,11 @@ class EventType:
     TOOL_CALL = "tool_call"
     TOOL_RESPONSE = "tool_response"
 
+    # task
+    TASK_START = "task_start"
+    TASK_COMPLETE = "task_complete"
+    TASK_ERROR = "task_error"
+
     # error
     ERROR = "error"
 
@@ -41,7 +46,7 @@ class Event(BaseModel):
     timestamp: float = Field(..., description="Timestamp of the event")
     content: Optional[str] = Field(None, description="Event content")
     tool_calls: Optional[List[Dict[str, Any]]] = Field(None, description="Tool calls")
-    tool_result: ToolCallResult = Field(None, description="Tool results")
+    tool_result: Optional[ToolCallResult] = Field(None, description="Tool results")
     finish_reason: Optional[str] = Field(None, description="Finish reason")
     model: Optional[str] = Field(None, description="Model name")
     error: Optional[str] = Field(None, description="Error message")

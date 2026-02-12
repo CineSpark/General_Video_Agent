@@ -60,14 +60,24 @@ If a TODO list is created, you should follow it strictly.
 
 #     """
 
+#     user_message = """
+# 我想要分析两张图片，使用 TodoWrite 这个工具创建 Todo 列表来记录任务规划和任务进度。
+
+# 本地文件路径是：
+# - /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg
+# - /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/dog.jpg
+
+# 请先上传图片到 TOS，然后使用 TOS 的 URL 分析图片。上传分析完第一张图片后，再上传第二张图片，并分析第二张图片。
+
+# 使用 task 工具创建一个任务，并委托 Analyzer 子代理来上传图片和分析图片。
+# """
+
     user_message = """
-我想要分析两张图片，使用 TodoWrite 这个工具创建 Todo 列表来记录任务规划和任务进度。
+我想要分析一个视频,
 
-本地文件路径是：
-- /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/cat.jpg
-- /Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/dog.jpg
+/Users/lxh/codebase/crengine/general_video_agent/General_Video_Agent/asset/test/002.mp4
 
-请先上传图片到 TOS，然后使用 TOS 的 URL 分析图片。上传分析完第一张图片后，再上传第二张图片，并分析第二张图片。
+使用 task 工具创建一个任务，并委托 Analyzer 子代理来上传视频和分析视频。
 """
 
     user_id = "user_123"

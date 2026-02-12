@@ -9,3 +9,7 @@ output/*
 input/*
 !input/.gitkeep
 work_dir/
+logs/*
+
+/asset/
+/logs/

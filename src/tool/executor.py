@@ -40,26 +40,45 @@ class executor():
         function_arguments = json.loads(tool_call.function.arguments)
 
         try:
-            result = None 
+            if function_name == "Task":
+                task_tool = TOOLS["Task"]
+                task_arguments = {
+                    "description": function_arguments["description"],
+                    "prompt": function_arguments["prompt"],
+                    "subagent_type": function_arguments["subagent_type"],
+                    "user_id": self.user_id,
+                    "session_id": self.session_id,
+                    "invocation_id": self.invocation_id,
+                    "introduction": function_arguments["introduction"],
+                    "task_id": function_id,
+                    "function_id": function_id,
+                    "function_name": function_name,
+                }
+                async for task_event in task_tool.execute_streaming(**task_arguments):
+                    if task_event.type in [EventType.TASK_START, EventType.TASK_COMPLETE, EventType.TASK_ERROR]:
+                        yield task_event
+                pass
+            else:
+                result = None 
 
-            result = await self.execute_tool(function_name, **function_arguments)  # todo: execute_tool
+                result = await self.execute_tool(function_name, **function_arguments)  # todo: execute_tool
 
-            toolcall_result = ToolCallResult(
-                tool_call_id=function_id,
-                function_name=function_name,
-                result=result,
-            )
+                toolcall_result = ToolCallResult(
+                    tool_call_id=function_id,
+                    function_name=function_name,
+                    result=result,
+                )
 
-            yield Event(
-                type=EventType.TOOL_RESPONSE,
-                event_id=str(uuid.uuid4()),
-                user_id=self.user_id,
-                session_id=self.session_id,
-                invocation_id=self.invocation_id,
-                author=self.author,
-                timestamp=time.time(),
-                tool_result=toolcall_result,
-            )
+                yield Event(
+                    type=EventType.TOOL_RESPONSE,
+                    event_id=str(uuid.uuid4()),
+                    user_id=self.user_id,
+                    session_id=self.session_id,
+                    invocation_id=self.invocation_id,
+                    author=self.author,
+                    timestamp=time.time(),
+                    tool_result=toolcall_result,
+                )
         except Exception as e:
             toolcall_result = ToolCallResult(
                 tool_call_id=function_id,
