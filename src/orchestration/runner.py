@@ -94,6 +94,7 @@ class runner():
                 "temperature": 0.1,
                 "parallel_tool_calls": False,
                 "stream": True,
+                "stream_options": {"include_usage": True},
             }
             if self.tools:
                 completion_params["tools"] = self.tools
@@ -104,7 +105,9 @@ class runner():
 
             full_content = ""
             tool_calls_dict = {}  # Accumulate tool calls by index
+            completion_tokens = 0
             final_finish_reason = None
+
 
             async for chunk in response:
                 # print("chunck: ", json.dumps(chunk.model_dump(), indent=2, ensure_ascii=False))
@@ -117,6 +120,10 @@ class runner():
                 delta = _get(choice0, "delta", None)
                 delta_tool_calls = getattr(delta, "tool_calls", None)
                 finish_reason = _get(choice0, "finish_reason", None)
+
+                usage = _get(chunk, "usage", None)
+                if usage:
+                    completion_tokens = usage.completion_tokens
 
                 content = _get(delta, "content", None) if delta is not None else None
                 if content:
@@ -185,7 +192,7 @@ class runner():
 
                 if finish_reason:
                     final_finish_reason = finish_reason
-                    break
+                    # break
 
             ## handle tool calls
             tool_calls = None
@@ -214,6 +221,7 @@ class runner():
                 content=full_content,
                 tool_calls=[tc.to_dict() for tc in tool_calls] if tool_calls else None,
                 finish_reason=final_finish_reason,
+                usage=completion_tokens,
                 model=self.model,
             )
             yield complete_event
@@ -283,6 +291,7 @@ class runner():
                     yield chunk
 
         except Exception as e:
+            logger.error(f"[{self.user_id}][{self.session_id}][{self.invocation_id}]Runner error: {e}")
             yield Event(
                 type=EventType.ERROR,
                 event_id=chunk_id if "chunk_id" in locals() and chunk_id else str(uuid.uuid4()),

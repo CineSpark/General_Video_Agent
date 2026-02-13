@@ -14,6 +14,7 @@ from ..event.events import EventType
 from ..orchestration.runner import runner
 from ..tool.executor import executor
 from ..event.events import Event
+from ..utils.count_tokens import count_tokens
 
 def _get(obj, key, default=None):
     if obj is None:
@@ -167,6 +168,7 @@ class BaseAgent(ABC):
                     filtered_messages[0]["content"],
                     ensure_ascii=False,
                 ),
+                usage=count_tokens(str(filtered_messages[0]["content"])),
             )
 
 

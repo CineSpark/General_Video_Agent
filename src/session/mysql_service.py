@@ -422,12 +422,29 @@ class MySQLSessionService(BaseSessionService):
                 return
 
             with self.SessionLocal() as db_session:
+
+                # 首先查询特定user_id和session_id的累计token使用量，得到其最新的累计token使用量
+                # 然后加上event.usage，得到新的累计token使用量
+                query_accumulated_sql = text(
+                    """
+                    SELECT COALESCE(MAX(accumulated_usage), 0) AS accumulated_usage
+                    FROM messages
+                    WHERE user_id = :user_id AND session_id = :session_id
+                """
+                )
+                result = db_session.execute(
+                    query_accumulated_sql,
+                    {"user_id": event.user_id, "session_id": event.session_id}
+                )
+                row = result.fetchone()
+                accumulated_usage = (row.accumulated_usage if row else 0) + event.usage
+
                 # 插入消息记录
                 insert_sql = text(
                     """
                     INSERT INTO messages
-                    (event_id, user_id, session_id, role, content, created_at)
-                    VALUES (:event_id, :user_id, :session_id, :role, :content, FROM_UNIXTIME(:timestamp))
+                    (event_id, user_id, session_id, role, content, created_at, token_usage, accumulated_usage)
+                    VALUES (:event_id, :user_id, :session_id, :role, :content, FROM_UNIXTIME(:timestamp), :token_usage, :accumulated_usage)
                     ON DUPLICATE KEY UPDATE
                         content = VALUES(content),
                         created_at = VALUES(created_at)
@@ -443,6 +460,8 @@ class MySQLSessionService(BaseSessionService):
                         "role": role,
                         "content": event.content,
                         "timestamp": event.timestamp,
+                        "token_usage": event.usage,
+                        "accumulated_usage": accumulated_usage,
                     }
                 )
                 db_session.commit()

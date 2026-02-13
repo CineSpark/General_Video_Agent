@@ -118,11 +118,6 @@ class MainAgent(BaseAgent):
 
         async for chunk in response_generation:
 
-            # print("chunk: ", chunk)
-            print(f"="*100)
-            print(f"chunk type: {chunk.type}")
-            print(f"="*100)
-
             if chunk.type not in [EventType.RESPONSE_CHUNK, EventType.TOOL_CALL]:
                 await self.session_service.append_event(self.session, chunk)
 

@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS messages (
     role ENUM('user','assistant') NOT NULL COMMENT '消息角色',
     content LONGTEXT NOT NULL COMMENT '消息内容',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '消息时间',
+    token_usage INT NOT NULL COMMENT '消息token',
+    accumulated_usage INT NOT NULL COMMENT '累计token使用量',
 
     INDEX idx_messages_user (user_id),
     INDEX idx_messages_session (session_id),

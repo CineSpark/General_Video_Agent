@@ -49,6 +49,7 @@ class Event(BaseModel):
     tool_result: Optional[ToolCallResult] = Field(None, description="Tool results")
     finish_reason: Optional[str] = Field(None, description="Finish reason")
     model: Optional[str] = Field(None, description="Model name")
+    usage: Optional[int] = Field(None, description="Usage")
     error: Optional[str] = Field(None, description="Error message")
 
     def to_dict(self):

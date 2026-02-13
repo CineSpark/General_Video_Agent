@@ -72,3 +72,38 @@
 {"level": "INFO", "time": "2026-02-12 17:47:25.881", "caller": "src/config/setup_database.py:160", "msg": " - events (0 rows)", "stacktrace": "", "event": ""}
 {"level": "INFO", "time": "2026-02-12 17:47:25.882", "caller": "src/config/setup_database.py:160", "msg": " - messages (0 rows)", "stacktrace": "", "event": ""}
 {"level": "INFO", "time": "2026-02-12 17:47:25.882", "caller": "src/config/setup_database.py:160", "msg": " - sessions (0 rows)", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.472", "caller": "src/logger/logging.py:105", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.483", "caller": "src/config/setup_database.py:59", "msg": "开始设置数据库", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.519", "caller": "src/config/setup_database.py:77", "msg": "数据库配置: 主机: localhost:3306; 用户: root; 数据库: video_agent", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.520", "caller": "src/config/setup_database.py:79", "msg": "连接数据库...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.530", "caller": "src/config/setup_database.py:106", "msg": "连接到目标数据库......", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.532", "caller": "src/config/setup_database.py:119", "msg": "读取表结构文件...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:17:42.532", "caller": "src/config/setup_database.py:122", "msg": "创建表结构...", "stacktrace": "", "event": ""}
+{"level": "ERROR", "time": "2026-02-13 12:17:42.557", "caller": "src/config/setup_database.py:139", "msg": "执行第3个SQL语句失败: (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'usage INT NOT NULL COMMENT '消息token数',\\n    created_at TIMESTAMP DEFAULT CU' at line 8\")", "stacktrace": "", "event": ""}
+{"level": "ERROR", "time": "2026-02-13 12:17:42.557", "caller": "src/config/setup_database.py:168", "msg": "设置数据库失败: (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'usage INT NOT NULL COMMENT '消息token数',\\n    created_at TIMESTAMP DEFAULT CU' at line 8\")", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.376", "caller": "src/logger/logging.py:105", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.380", "caller": "src/config/setup_database.py:59", "msg": "开始设置数据库", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.425", "caller": "src/config/setup_database.py:77", "msg": "数据库配置: 主机: localhost:3306; 用户: root; 数据库: video_agent", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.425", "caller": "src/config/setup_database.py:79", "msg": "连接数据库...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.442", "caller": "src/config/setup_database.py:106", "msg": "连接到目标数据库......", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.445", "caller": "src/config/setup_database.py:119", "msg": "读取表结构文件...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.445", "caller": "src/config/setup_database.py:122", "msg": "创建表结构...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.471", "caller": "src/config/setup_database.py:143", "msg": "数据库表结构创建成功", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.471", "caller": "src/config/setup_database.py:145", "msg": "验证表结构...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.473", "caller": "src/config/setup_database.py:156", "msg": "已创建表: events, messages, sessions", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.473", "caller": "src/config/setup_database.py:160", "msg": " - events (0 rows)", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.474", "caller": "src/config/setup_database.py:160", "msg": " - messages (0 rows)", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 12:19:19.474", "caller": "src/config/setup_database.py:160", "msg": " - sessions (0 rows)", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.845", "caller": "src/logger/logging.py:105", "msg": "Logger init...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.850", "caller": "src/config/setup_database.py:59", "msg": "开始设置数据库", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.885", "caller": "src/config/setup_database.py:77", "msg": "数据库配置: 主机: localhost:3306; 用户: root; 数据库: video_agent", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.885", "caller": "src/config/setup_database.py:79", "msg": "连接数据库...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.894", "caller": "src/config/setup_database.py:106", "msg": "连接到目标数据库......", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.897", "caller": "src/config/setup_database.py:119", "msg": "读取表结构文件...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.897", "caller": "src/config/setup_database.py:122", "msg": "创建表结构...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.917", "caller": "src/config/setup_database.py:143", "msg": "数据库表结构创建成功", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.917", "caller": "src/config/setup_database.py:145", "msg": "验证表结构...", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.918", "caller": "src/config/setup_database.py:156", "msg": "已创建表: events, messages, sessions", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.919", "caller": "src/config/setup_database.py:160", "msg": " - events (0 rows)", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.919", "caller": "src/config/setup_database.py:160", "msg": " - messages (0 rows)", "stacktrace": "", "event": ""}
+{"level": "INFO", "time": "2026-02-13 14:18:02.920", "caller": "src/config/setup_database.py:160", "msg": " - sessions (0 rows)", "stacktrace": "", "event": ""}
